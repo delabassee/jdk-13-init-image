@@ -8,9 +8,12 @@ See [init-images](https://medium.com/fnproject/even-wider-language-support-in-fn
 
 Push to DockerHub with `delabassee/jdk-xx-init` local
 
+:warning: to fix!
+
 ```
 docker images | grep jdk-xx-init
 docker tag xyz123... delabassee/jdk-xx-init
 docker push delabassee/jdk-xx-init
+docker tag delabassee/jdk-xx-init jdk-xx-init
 ```
 
