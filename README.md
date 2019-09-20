@@ -6,6 +6,21 @@ See [init-images](https://medium.com/fnproject/even-wider-language-support-in-fn
 * [Java 13 EA / jlink / Alpine](jdk12) - deprecated!
 * [Java 12 EA / jlink / Alpine](jdk12) - depreacted!
 
+
+`java -XshowSettings` will return 
+```
+  java.runtime.name = OpenJDK Runtime Environment
+    java.runtime.version = 12+33
+    java.specification.name = Java Platform API Specification
+    java.specification.vendor = Oracle Corporation
+    java.specification.version = 12
+    java.vendor = Oracle Corporation
+    java.vendor.url = https://java.oracle.com/
+    java.vendor.url.bug = https://bugreport.java.com/bugreport/
+    java.version = 12
+    java.version.date = 2019-03-19
+    ...
+
 Push to DockerHub with `delabassee/jdk-xx-init` local
 
 :warning: to fix!
