@@ -1,4 +1,4 @@
-## Fn Init Image for Java 14 EA / jlink / Alpone
+## Fn Init Image for Java 14 EA / jlink / Alpine
 
 ### Notes 
 
