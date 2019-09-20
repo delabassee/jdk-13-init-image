@@ -8,7 +8,8 @@ See [init-images](https://medium.com/fnproject/even-wider-language-support-in-fn
 
 Push to DockerHub with `delabassee/jdk-xx-init` local
 
-````
+```
 docker tag xyz123... delabassee/jdk-xx-init
 docker push delabassee/jdk-xx-init
 ```
+
