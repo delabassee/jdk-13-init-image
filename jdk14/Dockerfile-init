@@ -1,0 +1,3 @@
+FROM alpine:latest
+COPY jlink-init.tar /
+CMD cat /jlink-init.tar
