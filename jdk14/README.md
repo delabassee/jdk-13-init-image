@@ -1,4 +1,13 @@
-## Fn Init Image for Java 12 / JLink
+## Fn Init Image for Java 14 EA / jlink / Alpone
+
+### Notes 
+
+* `--strip-debug` throws a `java.io.IOException: Cannot run program "objcopy": error=2, No such file or directory.`
+Since JDK 13, the `--strip-debug` option has been extended to native symbols and maybe the toolchain isn't installed on Alpine. There are finer grain options for stripping, e.g. `--strip-java-debug-attributes`
+
+* Couldn't fine an Alpine/Mvn image so mvn in installed in the standrd Alpine image.
+
+### How-to
 
 See [init-images](https://medium.com/fnproject/even-wider-language-support-in-fn-with-init-images-a7a1b3135a6e) details.
 
