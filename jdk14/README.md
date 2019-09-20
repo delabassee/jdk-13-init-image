@@ -5,7 +5,7 @@
 * `--strip-debug` throws a `java.io.IOException: Cannot run program "objcopy": error=2, No such file or directory.`
 Since JDK 13, the `--strip-debug` option has been extended to native symbols and maybe the toolchain isn't installed on Alpine. There are finer grain options for stripping, e.g. `--strip-java-debug-attributes`
 
-* Couldn't fine an Alpine/Mvn image so mvn in installed in the standrd Alpine image.
+* Couldn't fine an Alpine/Maven image so maven in installed in the standard Alpine image.
 
 ### How-to
 
