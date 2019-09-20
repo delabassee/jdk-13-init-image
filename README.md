@@ -20,6 +20,7 @@ See [init-images](https://medium.com/fnproject/even-wider-language-support-in-fn
     java.version = 12
     java.version.date = 2019-03-19
     ...
+```
 
 Push to DockerHub with `delabassee/jdk-xx-init` local
 
