@@ -26,3 +26,10 @@ See [sandbox](https://github.com/delabassee/jlink-func-test).
 jlink-init:latest
 
 :warning: EA modules are appended with *"@ea12"* postfix!
+
+
+```
+System.getProperty("java.version");
+	java.runtime.version
+
+```
