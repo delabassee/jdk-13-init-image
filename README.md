@@ -1,10 +1,11 @@
-### Fn Init Image for JDK EA builds - jlink 'custom' JRE with Alpine/Portola
+### Fn Init Image for JDK builds - jlink 'custom' JRE with Alpine/Portola and Oracle Linux 8 Slim
 
 See [init-images](https://medium.com/fnproject/even-wider-language-support-in-fn-with-init-images-a7a1b3135a6e) details.
 
-* [Java 14 EA / jlink / Alpine](jdk14)
-* [Java 13 EA / jlink / Alpine](jdk12) - deprecated!
-* [Java 12 EA / jlink / Alpine](jdk12) - depreacted!
+* [Java 14 EA / jlink / Alpine](jdk14-alpine) - current EA
+* [Java 13 / jlink / Oracle Linux 8 Slim](jdk13) - current GA
+* [Java 13 EA / jlink / Alpine](jdk13-alpine) - deprecated!
+* [Java 12 EA / jlink / Alpine](jdk12-alpine) - depreacted!
 
 
 `java -XshowSettings` will return 
