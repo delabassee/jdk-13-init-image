@@ -1,22 +1,16 @@
 package com.example.fn;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class HelloFunction {
 
+
 	public String handleRequest(String input) {
 
-	var result =  
-			switch (input.toUpperCase())
-			{  
-				case "MONDAY", "TUESDAY" -> "Get back to work :(!";  
-				case "WEDNESDAY" -> "Wait for the end of week.";
-				case "THURSDAY" -> "Almost there... wait till tomorrow...";
-				case "FRIDAY" -> "Prepare plan for the weekend!";
-				case "SATURDAY", "SUNDAY" -> "Enjoy the weekend! :-)";
-				default -> "Please tell which day...";
-			};
-
-	 return result;
-
+		String name = (input == null || input.isEmpty()) ? "world"  : input;
+		var version = System.getProperty("java.runtime.version");
+		
+		return "Hello, " + name + " on " + version + ".";
 	}
 
 }
