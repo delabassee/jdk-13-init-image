@@ -9,4 +9,4 @@
 * *34 MB* `--no-header-files --no-man-pages --strip-java-debug-attributes --compress=2 --add-modules $(jdeps --print-module-deps ...)`
 
 
-[JDK-8218913 - Rename --strip-debug jlink plugin](https://bugs.openjdk.java.net/browse/JDK-8218913)
+[JDK-8218913 Rename --strip-debug jlink plugin](https://bugs.openjdk.java.net/browse/JDK-8218913)
