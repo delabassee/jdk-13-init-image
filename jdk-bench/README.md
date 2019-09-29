@@ -2,7 +2,6 @@
 
 ### Java 13
 
-|jlink Flags||||
 |---|---|---|---|
 JDK 13|330 MB|100%||
 |`--add-modules $(java --list-modules)`|178 MB|54%|100%|
