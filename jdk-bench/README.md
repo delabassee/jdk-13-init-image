@@ -2,7 +2,7 @@
 
 ### Java 13
 
-|Flags|MB| 
+|jlink Flags|MB| 
 |---|---|
 JDK 13|330|
 |`--add-modules $(java --list-modules)`|178|
