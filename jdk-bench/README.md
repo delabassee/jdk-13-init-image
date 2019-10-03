@@ -1,5 +1,7 @@
 ## Fn init-image to measure the various JRE sizes
 
+Use this [Google Sheet](https://docs.google.com/spreadsheets/d/1KkpZDQ8nNmpMWj85c99VLZpGDIArJiZGzUKQJrxP3J4/edit#gid=0).
+
 ### Java 13
 
 | | | | |
