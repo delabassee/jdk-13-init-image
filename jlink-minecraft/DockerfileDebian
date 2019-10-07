@@ -1,0 +1,29 @@
+FROM debian:buster
+RUN apt-get update
+RUN apt-get -y install openjdk-11-jdk
+
+WORKDIR work
+
+### 554M
+RUN jlink --output /work/java-runtime0 --add-modules $(java --list-modules >&1 | sed 's/@11.0.4/,/g' | sed -e ':a' -e 'N' -e '$!ba' -e 's/\n/ /g' | sed 's/ //g')
+
+### 554M
+RUN jlink --no-header-files --output /work/java-runtime0.header --add-modules $(java --list-modules >&1 | sed 's/@11.0.4/,/g' | sed -e ':a' -e 'N' -e '$!ba' -e 's/\n/ /g' | sed 's/ //g')
+
+### 554M
+RUN jlink --no-man-pages --output /work/java-runtime0.man --add-modules $(java --list-modules >&1 | sed 's/@11.0.4/,/g' | sed -e ':a' -e 'N' -e '$!ba' -e 's/\n/ /g' | sed 's/ //g')
+
+### 469M
+RUN jlink --output /work/java-runtime1  --add-modules java.base,java.compiler,java.desktop,java.management,java.naming,java.rmi,java.scripting,java.sql,jdk.sctp,jdk.unsupported,jdk.zipfs
+
+### 455M
+RUN jlink --strip-debug --output /work/java-runtime2  --add-modules java.base,java.compiler,java.desktop,java.management,java.naming,java.rmi,java.scripting,java.sql,jdk.sctp,jdk.unsupported,jdk.zipfs
+
+### 451M
+RUN jlink --compress=1  --output /work/java-runtime5 --add-modules java.base,java.compiler,java.desktop,java.management,java.naming,java.rmi,java.scripting,java.sql,jdk.sctp,jdk.unsupported,jdk.zipfs
+
+### 436M
+RUN jlink --compress=2 --output /work/java-runtime6 --add-modules java.base,java.compiler,java.desktop,java.management,java.naming,java.rmi,java.scripting,java.sql,jdk.sctp,jdk.unsupported,jdk.zipfs
+
+### 430M
+RUN jlink --compress=2 --strip-debug --output /work/java-runtime7  --add-modules java.base,java.compiler,java.desktop,java.management,java.naming,java.rmi,java.scripting,java.sql,jdk.sctp,jdk.unsupported,jdk.zipfs
