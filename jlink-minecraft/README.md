@@ -1,35 +1,36 @@
 
-###171M
-RUN /usr/java/openjdk-13/bin/jlink --output /work/java-runtime0 --add-modules $(java --list-modules >&1 | sed 's/@13/,/g' | sed -e ':a' -e 'N' -e '$!ba' -e 's/\n/ /g' | sed 's/ //g')
+## `jlink` images with Minecraft server
 
-###171M
-RUN /usr/java/openjdk-13/bin/jlink --no-header-files --output /work/java-runtime0.header --add-modules $(java --list-modules >&1 | sed 's/@13/,/g' | sed -e ':a' -e 'N' -e '$!ba' -e 's/\n/ /g' | sed 's/ //g')
+### 171M
 
-###171M
-RUN /usr/java/openjdk-13/bin/jlink --no-man-pages --output /work/java-runtime0.man --add-modules $(java --list-modules >&1 | sed 's/@13/,/g' | sed -e ':a' -e 'N' -e '$!ba' -e 's/\n/ /g' | sed 's/ //g')
+`RUN /usr/java/openjdk-13/bin/jlink --output /work/java-runtime0 --add-modules $(java --list-modules >&1 | sed 's/@13/,/g' | sed -e ':a' -e 'N' -e '$!ba' -e 's/\n/ /g' | sed 's/ //g')`
 
+### 171M
+`RUN /usr/java/openjdk-13/bin/jlink --no-header-files --output /work/java-runtime0.header --add-modules $(java --list-modules >&1 | sed 's/@13/,/g' | sed -e ':a' -e 'N' -e '$!ba' -e 's/\n/ /g' | sed 's/ //g')`
 
-###88M
-RUN /usr/java/openjdk-13/bin/jlink --output /work/java-runtime1  --add-modules java.base,java.compiler,java.desktop,java.management,java.naming,java.rmi,java.scripting,java.sql,jdk.sctp,jdk.unsupported,jdk.zipfs
+### 171M
+`RUN /usr/java/openjdk-13/bin/jlink --no-man-pages --output /work/java-runtime0.man --add-modules $(java --list-modules >&1 | sed 's/@13/,/g' | sed -e ':a' -e 'N' -e '$!ba' -e 's/\n/ /g' | sed 's/ //g')`
 
-
-###74M
-RUN /usr/java/openjdk-13/bin/jlink --strip-debug --output /work/java-runtime2  --add-modules java.base,java.compiler,java.desktop,java.management,java.naming,java.rmi,java.scripting,java.sql,jdk.sctp,jdk.unsupported,jdk.zipfs
+### 88M
+`RUN /usr/java/openjdk-13/bin/jlink --output /work/java-runtime1  --add-modules java.base,java.compiler,java.desktop,java.management,java.naming,java.rmi,java.scripting,java.sql,jdk.sctp,jdk.unsupported,jdk.zipfs`
 
 
-###74M
-RUN /usr/java/openjdk-13/bin/jlink --strip-java-debug-attributes --output /work/java-runtime3  --add-modules java.base,java.compiler,java.desktop,java.management,java.naming,java.rmi,java.scripting,java.sql,jdk.sctp,jdk.unsupported,jdk.zipfs
-
-###88M
-RUN /usr/java/openjdk-13/bin/jlink --strip-native-debug-symbols exclude-debuginfo-files --output /work/java-runtime4  --add-modules java.base,java.compiler,java.desktop,java.management,java.naming,java.rmi,java.scripting,java.sql,jdk.sctp,jdk.unsupported,jdk.zipfs
-
-###70M
-RUN /usr/java/openjdk-13/bin/jlink --compress=1  --output /work/java-runtime5 --add-modules java.base,java.compiler,java.desktop,java.management,java.naming,java.rmi,java.scripting,java.sql,jdk.sctp,jdk.unsupported,jdk.zipfs
+### 74M
+`RUN /usr/java/openjdk-13/bin/jlink --strip-debug --output /work/java-runtime2  --add-modules java.base,java.compiler,java.desktop,java.management,java.naming,java.rmi,java.scripting,java.sql,jdk.sctp,jdk.unsupported,jdk.zipfs`
 
 
-###57M
-RUN /usr/java/openjdk-13/bin/jlink --compress=2 --output /work/java-runtime6 --add-modules java.base,java.compiler,java.desktop,java.management,java.naming,java.rmi,java.scripting,java.sql,jdk.sctp,jdk.unsupported,jdk.zipfs
+### 74M
+`RUN /usr/java/openjdk-13/bin/jlink --strip-java-debug-attributes --output /work/java-runtime3  --add-modules java.base,java.compiler,java.desktop,java.management,java.naming,java.rmi,java.scripting,java.sql,jdk.sctp,jdk.unsupported,jdk.zipfs`
 
+### 88M
+`RUN /usr/java/openjdk-13/bin/jlink --strip-native-debug-symbols exclude-debuginfo-files --output /work/java-runtime4  --add-modules java.base,java.compiler,java.desktop,java.management,java.naming,java.rmi,java.scripting,java.sql,jdk.sctp,jdk.unsupported,jdk.zipfs`
+
+### 70M
+`RUN /usr/java/openjdk-13/bin/jlink --compress=1  --output /work/java-runtime5 --add-modules java.base,java.compiler,java.desktop,java.management,java.naming,java.rmi,java.scripting,java.sql,jdk.sctp,jdk.unsupported,jdk.zipfs`
+
+
+### 57M
+`RUN /usr/java/openjdk-13/bin/jlink --compress=2 --output /work/java-runtime6 --add-modules java.base,java.compiler,java.desktop,java.management,java.naming,java.rmi,java.scripting,java.sql,jdk.sctp,jdk.unsupported,jdk.zipfs`
 
 
 
