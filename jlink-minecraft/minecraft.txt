@@ -1,0 +1,3 @@
+jlink --output java-runtime  --add-modules java.base,java.compiler,java.desktop,java.management,java.naming,java.rmi,java.scripting,java.sql,jdk.sctp,jdk.unsupported,jdk.zipfs
+
+
