@@ -55,9 +55,14 @@ https://bugs.openjdk.java.net/browse/JDK-8214796
 
 ### Debian
 
-* https://packages.debian.org/buster/openjdk-11-jdk
+* Debian OpenJDK packages
+
+	* [openjdk-11-jdk](https://packages.debian.org/buster/openjdk-11-jdk)
+	
+	* [openjdk-12-jdk](https://packages.debian.org/source/sid/openjdk-12)
+	
+	* [openjdk-13-jdk](https://packages.debian.org/bullseye/openjdk-13-jdk)
 
 * [libjvm.so size issue](https://github.com/docker-library/openjdk/issues/217)
 
-* [OpenJDK 13](https://packages.debian.org/bullseye/openjdk-13-jdk)packages
 
