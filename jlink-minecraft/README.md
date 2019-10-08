@@ -47,3 +47,9 @@ Options may be combined (if they make sense).
 
 https://bugs.openjdk.java.net/browse/JDK-8214796
 
+
+-----
+
+### Debian
+
+https://packages.debian.org/buster/openjdk-11-jdk
