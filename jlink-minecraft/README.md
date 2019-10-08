@@ -36,14 +36,17 @@
 
 ------
 
---strip-native-debug-symbols exclude-debuginfo-files => strips debug info from native libs and files discarding debug info 
---strip-native-debug-symbols keep-debuginfo-files => strips debug info from native libs and files, keeps debug info in files <filename>.debuginfo 
---strip-native-debug-symbols keep-debuginfo-files=foo => strips debug info from native libs and files, keeps debug info in files <filename>.foo 
---strip-native-debug-symbols objcopy=<path/to/objcopy> => strips debug info from native libs and files, discarding debug info files and using objcopy at the provided path. 
+### Native Debug Symbols
+
+
+* `--strip-native-debug-symbols exclude-debuginfo-files` => strips debug info from native libs and files discarding debug info 
+* `--strip-native-debug-symbols keep-debuginfo-files` => strips debug info from native libs and files, keeps debug info in files <filename>.debuginfo 
+* `--strip-native-debug-symbols keep-debuginfo-files=foo` => strips debug info from native libs and files, keeps debug info in files <filename>.foo 
+* `--strip-native-debug-symbols objcopy=<path/to/objcopy>` => strips debug info from native libs and files, discarding debug info files and using `objcopy` at the provided path. 
 
 Options may be combined (if they make sense). 
 
---strip-debug post this enhancement will strip java debug info from Java classes via (--strip-java-debug-attributes, see JDK-8218913) and also strip native debug info on platfor
+`--strip-debug` post this enhancement will strip java debug info from Java classes via (`--strip-java-debug-attributes`, see JDK-8218913) and also strip native debug info on platform.
 
 https://bugs.openjdk.java.net/browse/JDK-8214796
 
@@ -52,4 +55,9 @@ https://bugs.openjdk.java.net/browse/JDK-8214796
 
 ### Debian
 
-https://packages.debian.org/buster/openjdk-11-jdk
+* https://packages.debian.org/buster/openjdk-11-jdk
+
+* [libjvm.so size issue](https://github.com/docker-library/openjdk/issues/217)
+
+* [OpenJDK 13](https://packages.debian.org/bullseye/openjdk-13-jdk)packages
+
