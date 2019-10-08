@@ -1,6 +1,8 @@
 
 ## `jlink` images with Minecraft server
 
+[Default Server](https://www.minecraft.net/en-us/download/server) that Mojang distributes.
+
 ### 171M
 
 `RUN /usr/java/openjdk-13/bin/jlink --output /work/java-runtime0 --add-modules $(java --list-modules >&1 | sed 's/@13/,/g' | sed -e ':a' -e 'N' -e '$!ba' -e 's/\n/ /g' | sed 's/ //g')`
