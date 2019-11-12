@@ -1,6 +1,5 @@
 FROM delabassee/fn-cache:latest as cache-stage
 
-#FROM maven:3.6.2-jdk-14-alpine as build-stage
 FROM openjdk:13 as build-stage
 WORKDIR /function
 RUN curl https://www-eu.apache.org/dist/maven/maven-3/3.6.2/binaries/apache-maven-3.6.2-bin.tar.gz -o apache-maven-3.6.2-bin.tar.gz 
@@ -19,12 +18,7 @@ RUN ["mvn", "package", \
     "-Dmdep.prependGroupId=true", \
     "-DoutputDirectory=target" ]
 
-#RUN /usr/java/openjdk-13/bin/jlink --compress=2 --no-header-files --no-man-pages --strip-java-debug-attributes --output /function/fnjre #--add-modules $(/usr/java/openjdk-13/bin/jdeps --print-module-deps /function/target/function.jar)
-
 RUN /usr/java/openjdk-13/bin/jlink --no-header-files --no-man-pages --strip-java-debug-attributes --output /function/fnjre --add-modules $(/usr/java/openjdk-13/bin/jdeps --print-module-deps /function/target/function.jar)
-
-
-# --strip-debug --> java.io.IOException: Cannot run program "objcopy": error=2, No such file or directory
 
 FROM oraclelinux:8-slim
 WORKDIR /function

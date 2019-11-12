@@ -1,0 +1,3 @@
+FROM alpine:latest
+COPY jdk13-init.tar /
+CMD cat /jdk13-init.tar
