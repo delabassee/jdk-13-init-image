@@ -34,3 +34,6 @@ docker push delabassee/jdk-xx-init
 docker tag delabassee/jdk-xx-init jdk-xx-init
 ```
 
+### Notes
+
+* [jlink args in a file](https://github.com/brunoborges/simple-web-app/blob/master/Dockerfile.jlink)
