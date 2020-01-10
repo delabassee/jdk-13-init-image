@@ -3,10 +3,12 @@ FROM delabassee/fn-cache:latest as cache-stage
 #FROM maven:3.6.2-jdk-14-alpine as build-stage
 FROM openjdk:14-alpine as build-stage
 WORKDIR /function
-RUN wget http://apache.cu.be/maven/maven-3/3.6.2/binaries/apache-maven-3.6.2-bin.tar.gz
-RUN tar -zxvf apache-maven-3.6.2-bin.tar.gz
+RUN wget --no-check-certificate https://apache.forsale.plus/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
+#        ^^^ Don't do this at home!!
 
-ENV PATH="/function/apache-maven-3.6.2/bin:${PATH}"
+RUN tar -zxvf apache-maven-3.6.3-bin.tar.gz
+
+ENV PATH="/function/apache-maven-3.6.3/bin:${PATH}"
 
 ENV MAVEN_OPTS -Dhttp.proxyHost= -Dhttp.proxyPort= -Dhttps.proxyHost= -Dhttps.proxyPort= -Dhttp.nonProxyHosts= -Dmaven.repo.local=/usr/share/maven/ref/repository
 ADD pom.xml /function/pom.xml
